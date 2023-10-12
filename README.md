@@ -33,7 +33,7 @@ asdfasdf
 Execute the steps in this link: 
 https://www.passportjs.org/tutorials/google/register/
 
-set values of google client id and secret in .env file.
+set values of google client id and secret in $PROJECT/api/.env file.
 GOOGLE_CLIENT_ID=xxxxxxxxxxxxxxxx
 GOOGLE_CLIENT_SECRET=yyyyyyyyyyyyyyyyyyyy
 
