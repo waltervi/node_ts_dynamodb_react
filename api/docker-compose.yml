@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+ dynamodb-local2:
+   command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+   image: "amazon/dynamodb-local:latest"
+   container_name: dynamodb-local2
+   ports:
+     - "8000:8000"
+   volumes:
+     - "./docker/dynamodb:/home/dynamodblocal/data"
+   working_dir: /home/dynamodblocal
+
+
+  #  Correr sudo chmod 777 ./docker/dynamodb porque si no la bbdd no levanta
+  #  Para correr la bbdd : $ docker-compose up

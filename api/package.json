@@ -1,0 +1,61 @@
+{
+  "name": "example_api",
+  "version": "1.0.0",
+  "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "prod-start": "npm run build && node build/app.js",
+    "build": "rimraf ./build && tsc",
+    "dev": "DEBUG=example_api:* ts-node --esm ./src/app.ts",
+    "compile": "tsc",
+    "test": "rimraf ./dist && tsc && mocha --require dist/test/fixtures.js dist/test/**/*.test.js --timeout 10000 --exit",
+    "test2": "rimraf ./dist && tsc && mocha --require dist/test/fixtures.js dist/test/router/V1_events_POST_VALID.test.js --timeout 10000 --exit",
+    
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix"
+  },
+  
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.398.0",
+    "@aws-sdk/util-dynamodb": "^3.405.0",
+    "connect-dynamodb": "^3.0.1",
+    "cookie-parser": "^1.4.6",
+    "crypto-js": "^4.1.1",
+    "date-format": "^4.0.14",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-google-oidc": "^0.1.0",
+    "ulid": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/connect-sqlite3": "^0.9.3",
+    "@types/cookie-parser": "^1.4.4",
+    "@types/crypto-js": "^4.1.2",
+    "@types/debug": "^4.1.8",
+    "@types/express": "^4.17.17",
+    "@types/express-session": "^1.17.7",
+    "@types/mocha": "^10.0.1",
+    "@types/morgan": "^1.9.5",
+    "@types/node": "^20.5.8",
+    "@types/passport": "^1.0.12",
+    "@types/uuid": "^9.0.4",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "chai": "^4.3.8",
+    "chai-http": "^4.4.0",
+    "eslint": "^8.48.0",
+    "mocha": "^10.2.0",
+    "rimraf": "^5.0.1",
+    "supertest": "^6.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

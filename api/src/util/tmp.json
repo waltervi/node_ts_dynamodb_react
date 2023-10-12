@@ -1,0 +1,15 @@
+{
+    type: "t",
+    dateF: dateF,
+    dateT: dateT,
+    title: "titulo 1",
+    rec: "cust",
+    custRec : {
+      endsNever : true
+    },
+    color: "blue",
+    desc: "description",
+    links: ["http://www.infobae.com"],
+    notifs: [5, 10, 15],
+    shwAvail: true,
+  }
